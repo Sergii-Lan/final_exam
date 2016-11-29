@@ -1,0 +1,7 @@
+# ignore folder node-modules
+node_modules/
+# ignore folder .sass-cache
+.sass-cache/
+# ignore folder .idea
+.idea/
+.idea/libraries/
