@@ -1,0 +1,159 @@
+header {
+    background: rgb(26, 25, 21) url('../img/bg_header_mb.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container {
+        padding: 18px 0 120px;
+    }
+}
+
+.auth {
+    margin-bottom: 119px;
+    text-align: center;
+}
+
+.auth__entry {
+    display: inline-block;
+    width: 86px;
+    height: 32px;
+    border: 2px solid transparent;
+    border-radius: 18px;
+    color: $white;
+    font-family: $font-title;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+
+    &:first-child {
+        margin-left: -24px;
+    }
+
+    &:last-child {
+        margin-left: -7px;
+    }
+
+    &:hover {
+        border: 2px solid $white;
+    }
+}
+
+.logo {
+    display: block;
+    width: 177px;
+    height: 20px;
+    margin: 0 auto;
+    color: $white;
+    font-family: $font-title;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+}
+
+.header-body__title {
+    margin: 34px 0 16px;
+    color: $white;
+    font-family: $font-title;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.header-body__text {
+    width: 217px;
+    margin: 0 auto;
+    color: $white;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 19px;
+    text-align: center;
+}
+
+.header-body__find {
+    display: block;
+    width: 280px;
+    height: 40px;
+    margin: 17px auto;
+    border-radius: 20px;
+    background-color: $red;
+    color: $white;
+    font-family: $font-title;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+
+    &:hover {
+        color: $black;
+    }
+}
+
+@include respond-to(tablet) {
+    header {
+        background: rgb(26, 25, 21) url('../img/bg_header_tb.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .container {
+            padding: 36px 45px 196px;
+        }
+    }
+
+    .header-head {
+        position: relative;
+    }
+
+    .auth {
+        margin: 0 5px 143px 0;
+        text-align: right;
+    }
+
+    .logo {
+        position: absolute;
+        top: 12px;
+        left: 2px;
+    }
+
+    .header-body__title {
+        margin-bottom: 28px;
+        font-size: 52px;
+        letter-spacing: .2px;
+        line-height: 63px;
+    }
+
+    .header-body__text {
+        width: 100%;
+        font-size: 24px;
+        letter-spacing: .2px;
+    }
+
+    .header-body__find {
+        width: 226px;
+        margin: 38px auto;
+        letter-spacing: .2px;
+    }
+}
+
+@include respond-to(desktop) {
+    header {
+        background: rgb(26, 25, 21) url('../img/bg_header_dt.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .container {
+            width: 940px;
+            margin: 0 auto;
+            padding: 36px 26px 196px;
+        }
+    }
+
+    .logo {
+        left: -1px;
+    }
+
+    .auth {
+        margin-right: 0;
+    }
+}

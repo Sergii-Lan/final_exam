@@ -1,0 +1,370 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+header {
+  background: #1a1915 url("../img/bg_header_dt.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  header .container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 36px 26px 196px; }
+
+.header-head {
+  position: relative; }
+
+.auth {
+  margin: 0 0 143px;
+  text-align: right; }
+
+.logo {
+  position: absolute;
+  top: 12px;
+  left: -1px; }
+
+.header-body__title {
+  margin: 34px 0 28px;
+  font-size: 52px;
+  line-height: 63px;
+  letter-spacing: 0.2px; }
+
+.header-body__text {
+  width: 100%;
+  font-size: 24px;
+  letter-spacing: 0.2px; }
+
+.header-body__find {
+  width: 226px;
+  margin: 38px auto;
+  letter-spacing: 0.2px; }
+  .header-body__find:hover {
+    color: #333; }
+
+#works .container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 97px 26px 95px; }
+
+.works-carousel {
+  text-align: center; }
+
+.works-head__title {
+  margin-left: -3px;
+  margin-bottom: 35px;
+  letter-spacing: 0.2px; }
+
+.slider {
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin-right: 10px;
+  overflow: hidden; }
+  .slider:last-child {
+    margin-right: 0; }
+
+.slider--2,
+.slider--3 {
+  display: inline-block; }
+
+.slider--2 .slide-right {
+  right: 9px; }
+
+.slider--2 .slide-left {
+  left: 9px; }
+
+.slider-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.slider-content__slide {
+  width: auto;
+  height: 100%;
+  padding: 231px 18px 20px; }
+
+.slider-content__slide--1 {
+  background: transparent;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000)";
+  /* IE8 */
+  zoom: 1;
+  background: url("../img/carousel/7.png") -187px -20px no-repeat; }
+
+.slider-content__slide--2 {
+  background: transparent;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000)";
+  /* IE8 */
+  zoom: 1;
+  background: url("../img/carousel/8.png") -159px -16px no-repeat;
+  padding: 260px 18px 20px 19px; }
+
+.slider-content__slide--3 {
+  background: transparent;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000)";
+  /* IE8 */
+  zoom: 1;
+  background: url("../img/carousel/9.png") -175px -22px no-repeat; }
+
+.slider-content__step {
+  margin-left: 3px; }
+
+.slider-content__title {
+  margin: 16px 0 12px;
+  line-height: 28px; }
+
+.slider-content__text {
+  line-height: 17px; }
+
+.slider-arrow {
+  display: block;
+  position: absolute;
+  top: 154px;
+  width: 30px;
+  height: 55px;
+  cursor: pointer;
+  z-index: 5; }
+
+.slide-left {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 30px;
+  height: 55px;
+  display: none;
+  left: 19px; }
+
+.slide-right {
+  background-image: url(../img/sprite.png);
+  background-position: -32px 0px;
+  width: 30px;
+  height: 55px;
+  right: 19px; }
+
+#partners .container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 26px 98px; }
+
+.partners {
+  width: inherit; }
+
+.partners__title {
+  padding: 0 28px 32px; }
+
+.partner {
+  display: inline-block;
+  width: 223px;
+  height: 259px;
+  padding: 0;
+  margin-right: 5px;
+  vertical-align: top;
+  text-align: center; }
+
+.partner__avatar:before {
+  display: block;
+  position: absolute;
+  right: -4px;
+  bottom: -6px;
+  width: 32px;
+  height: 32px;
+  border: 4px solid #fff;
+  content: '';
+  z-index: 2; }
+
+.partner__avatar:after {
+  display: block;
+  position: absolute;
+  right: 9px;
+  bottom: 9px;
+  width: 10px;
+  height: 10px;
+  content: '';
+  z-index: 5; }
+
+.partner__avatar--1:before {
+  background-color: #ff4e50; }
+
+.partner__avatar--1:after {
+  background-image: url(../img/sprite.png);
+  background-position: -64px -19px;
+  width: 16px;
+  height: 16px; }
+
+.partner__avatar--2:before {
+  background-color: #ffa507; }
+
+.partner__avatar--2:after {
+  background-image: url(../img/sprite.png);
+  background-position: -64px 0px;
+  width: 16px;
+  height: 17px; }
+
+.partner__avatar--3:before {
+  background-color: #1cd7ad; }
+
+.partner__avatar--3:after {
+  background-image: url(../img/sprite.png);
+  background-position: -64px -37px;
+  width: 13px;
+  height: 16px; }
+
+.partner__avatar--4:before {
+  background-color: #4e73db; }
+
+.partner__avatar--4:after {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -57px;
+  width: 17px;
+  height: 16px; }
+
+.see-other {
+  width: 188px;
+  margin: 14px auto 0; }
+
+.partner--3 .partner__name {
+  padding: 21px 0 15px; }
+
+.partner--3 .partner__about {
+  letter-spacing: .3px; }
+
+#idea .container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 26px; }
+
+.idea__title {
+  margin-bottom: 34px; }
+
+.cards__block {
+  height: 310px;
+  margin-bottom: 20px; }
+  .cards__block:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 140px 0 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+    content: attr(data-title);
+    z-index: 5; }
+
+.cards__block--5,
+.cards__block--6 {
+  width: 620px; }
+
+#search {
+  border-bottom: 4px solid #ff4e50; }
+  #search .container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 77px 19px 40px;
+    text-align: center; }
+
+.search__title {
+  margin-bottom: 33px; }
+
+.search-form {
+  margin: 24px 0 50px; }
+
+input[type="text"] {
+  width: 208px;
+  height: 20px;
+  margin: 0 5px 0 -4px;
+  padding: 10px 15px; }
+
+input[type="button"] {
+  width: 160px; }
+
+footer .container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 38px 26px 36px;
+  text-align: center; }
+
+.foot:after {
+  display: block;
+  clear: both;
+  content: ''; }
+
+.footer-logo {
+  width: 142px;
+  float: left; }
+
+.footer-company {
+  margin: 0; }
+
+nav {
+  width: 60px;
+  margin-left: 97px;
+  float: left; }
+
+.menu {
+  display: block;
+  margin-top: 12px;
+  text-align: left; }
+
+.menu__link {
+  display: block; }
+
+.footer-partners {
+  width: 60px;
+  margin: 0 100px;
+  float: left; }
+
+.design {
+  width: 110px;
+  float: right; }
+
+.design__title {
+  text-align: right; }

@@ -1,0 +1,156 @@
+footer {
+    .container {
+        padding: 18px 0 17px;
+        text-align: center;
+    }
+}
+
+.footer-logo {
+    display: block;
+    color: $red;
+    font-family: $font-title;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .7px;
+    text-transform: uppercase;
+}
+
+.footer-company {
+    margin: 14px 0 2px;
+    color: $black;
+    font-family: $font-title;
+    font-weight: 700;
+}
+
+.menu {
+    display: inline-block;
+}
+
+.menu__link {
+    display: inline-block;
+    margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.menu__item {
+    display: block;
+    color: $color-foot_menu;
+    font-family: $font-main;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+
+    &:hover {
+        color: $red;
+    }
+}
+
+.footer-partners {
+    margin: 10px 0 16px;
+    color: $black;
+    font-family: $font-title;
+    font-weight: 700;
+}
+
+.design__title {
+    color: $grey;
+    font-family: $font-title;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+}
+
+.design__logo {
+    display: block;
+    width: 110px;
+    height: 24px;
+    margin: 10px auto 0;
+    background: url('../img/partner-logo.png') 0 0 no-repeat;
+}
+
+@include respond-to(tablet) {
+    footer {
+        .container {
+            padding: 38px 0 36px;
+        }
+    }
+
+    .foot {
+        &::after {
+            display: block;
+            clear: both;
+            content: '';
+        }
+    }
+
+    .footer-logo {
+        width: 142px;
+        margin-left: 40px;
+        float: left;
+    }
+
+    nav {
+        width: 60px;
+        margin-left: 84px;
+        float: left;
+    }
+
+    .footer-company {
+        margin: 0;
+    }
+
+    .menu {
+        margin-top: 12px;
+        text-align: left;
+    }
+
+    .menu__link {
+        display: block;
+    }
+
+    .footer-partners {
+        width: 60px;
+        margin: 0 111px;
+        float: left;
+    }
+
+    .design {
+        width: 110px;
+        margin-right: 40px;
+        float: right;
+    }
+
+    .design__title {
+        text-align: right;
+    }
+}
+
+@include respond-to(desktop) {
+    footer {
+        .container {
+            width: 940px;
+            margin: 0 auto;
+            padding: 38px 26px 36px;
+        }
+    }
+
+    .footer-logo {
+        margin-left: 0;
+    }
+
+    nav {
+        margin-left: 97px;
+    }
+
+    .footer-partners {
+        margin: 0 100px;
+    }
+
+    .design {
+        margin-right: 0;
+    }
+}

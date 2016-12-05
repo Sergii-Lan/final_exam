@@ -1,0 +1,20 @@
+@import "./_fonts";
+@import "./_variables";
+@import "./_media";
+@import "./_sprite";
+@import "./_header";
+@import "./_works";
+@import "./_partners";
+@import "./_idea";
+@import "./_search";
+@import "./_footer";
+
+// Basic style
+body {
+    background-color: $white;
+    font-family: $font-main;
+    font-size: 14px;
+    a {
+        text-decoration: none;
+    }
+}

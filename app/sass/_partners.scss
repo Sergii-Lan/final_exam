@@ -1,0 +1,209 @@
+#partners {
+    .container {
+        padding: 0 0 37px;
+    }
+}
+
+.partners__title {
+    margin-left: -7px;
+    padding: 0 28px 15px;
+    color: $black;
+    font-family: $font-title;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+}
+
+.partner {
+    padding: 0 48px 25px;
+    text-align: center;
+}
+
+.partner__avatar {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+
+    &::before {
+        display: block;
+        position: absolute;
+        right: -4px;
+        bottom: -6px;
+        width: 32px;
+        height: 32px;
+        border: 4px solid $white;
+        border-radius: 50%;
+        content: '';
+        z-index: 2;
+    }
+
+    &::after {
+        display: block;
+        position: absolute;
+        right: 9px;
+        bottom: 9px;
+        width: 10px;
+        height: 10px;
+        content: '';
+        z-index: 5;
+    }
+
+    img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+    }
+}
+
+.partner__avatar--1 {
+    &::before {
+        background-color: $color-avatar1;
+    }
+
+    &::after {
+        @include sprite($icon-avatar1);
+    }
+}
+
+.partner__avatar--2 {
+    &::before {
+        background-color: $color-avatar2;
+    }
+
+    &::after {
+        @include sprite($icon-avatar2);
+    }
+}
+
+.partner__avatar--3 {
+    &::before {
+        background-color: $color-avatar3;
+    }
+
+    &::after {
+        @include sprite($icon-avatar3);
+    }
+}
+
+.partner__avatar--4 {
+    &::before {
+        background-color: $color-avatar4;
+    }
+
+    &::after {
+        @include sprite($icon-avatar4);
+    }
+}
+
+.partner__name {
+    display: block;
+    padding: 21px 0 15px;
+    color: $black;
+    font-family: $font-title;
+    font-weight: 700;
+
+    &:hover {
+        color: $red;
+    }
+}
+
+.partner__about {
+    color: $color-foot_menu;
+    font-weight: 300;
+    letter-spacing: .2px;
+    line-height: 17px;
+}
+
+.see-other {
+    display: block;
+    width: 276px;
+    height: 36px;
+    margin: 0 auto;
+    border: 2px solid $red;
+    border-radius: 20px;
+    color: $red;
+    font-family: $font-title;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+
+    &:hover {
+        color: $black;
+    }
+}
+
+.partner--3 {
+    .partner__name {
+        padding: 21px 0 15px;
+    }
+
+    .partner__about {
+        letter-spacing: .3px;
+    }
+}
+
+@include respond-to(tablet) {
+    #partners {
+        .container {
+            padding: 0 144px 98px;
+        }
+    }
+
+    .partners {
+        &::after {
+            display: block;
+            clear: both;
+            content: '';
+        }
+    }
+
+    .partner {
+        width: 223px;
+        height: 259px;
+        padding: 0;
+        float: left;
+        text-align: center;
+    }
+
+    .partners__title {
+        padding-bottom: 30px;
+    }
+
+    .partner--2 {
+        float: right;
+    }
+
+    .partner--4 {
+        float: right;
+    }
+
+    .see-other {
+        width: 188px;
+        margin: 14px auto 0;
+    }
+}
+
+@include respond-to(desktop) {
+    #partners {
+        .container {
+            width: 940px;
+            margin: 0 auto;
+            padding: 0 26px 98px;
+        }
+    }
+
+    .partners__title {
+        padding-bottom: 32px;
+    }
+
+    .partner--1 {
+        margin-right: 15px;
+    }
+
+    .partner--2 {
+        margin-right: 18px;
+        float: left;
+    }
+}

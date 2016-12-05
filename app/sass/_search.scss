@@ -1,0 +1,95 @@
+#search {
+    border-bottom: 4px solid $red;
+    .container {
+        padding: 27px 19px 40px;
+        text-align: center;
+    }
+}
+
+.search__title {
+    margin-bottom: 14px;
+    color: $black;
+    font-family: $font-title;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+}
+
+.search__question {
+    color: $black;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: .1px;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 248px;
+    height: 38px;
+    margin: 16px 0 10px -4px;
+    padding: 0 15px;
+    border: 1px solid $grey;
+    border-radius: 4px;
+    color: $color-input_text;
+    font-family: $font-main;
+    font-size: 14px;
+    font-weight: 300;
+    box-shadow: 0 1px 0 #eee;
+}
+
+input[type="button"] {
+    width: 280px;
+    height: 40px;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    background-color: $red;
+    color: $white;
+    font-family: $font-title;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:hover {
+        color: $black;
+    }
+}
+
+@include respond-to(tablet) {
+    #search {
+        .container {
+            padding: 76px 19px 40px;
+        }
+    }
+
+    .search__title {
+        margin-bottom: 33px;
+    }
+
+    .search-form {
+        margin: 23px 0 50px;
+    }
+
+    input[type="text"] {
+        width: 208px;
+        margin-right: 5px;
+    }
+
+    input[type="button"] {
+        width: 160px;
+    }
+}
+@include respond-to(desktop) {
+    #search {
+        .container {
+            width: 940px;
+            margin: 0 auto;
+            padding-top: 77px;
+        }
+    }
+
+    .search-form {
+        margin-top: 24px;
+    }
+}

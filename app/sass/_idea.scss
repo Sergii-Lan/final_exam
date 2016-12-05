@@ -1,0 +1,99 @@
+#idea {
+    .container {
+        padding: 0;
+    }
+}
+
+.idea__title {
+    margin-bottom: 15px;
+    padding: 0 20px;
+    color: $black;
+    font-family: $font-title;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+}
+
+.cards {
+    width: inherit;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.cards__block {
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 120px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+
+    &::after {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 48px 0 0;
+        background-color: rgba(0, 0, 0, .5);
+        color: $white;
+        font-family: $font-title;
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+        content: attr(data-title);
+        z-index: 5;
+    }
+}
+
+.cards__item {
+    display: block;
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+
+@include respond-to(tablet) {
+    .idea__title {
+        margin-bottom: 34px;
+    }
+
+    .cards__block {
+        width: 236px;
+        height: 310px;
+        margin-bottom: 20px;
+
+        &::after {
+            padding: 140px 0 0;
+            line-height: 28px;
+        }
+    }
+
+    .cards__block--5,
+    .cards__block--6 {
+        width: 492px;
+        height: 310px;
+    }
+}
+
+@include respond-to(desktop) {
+    #idea {
+        .container {
+            width: 940px;
+            margin: 0 auto;
+            padding: 0 26px;
+        }
+    }
+
+    .cards__block {
+        width: 300px;
+    }
+
+    .cards__block--5,
+    .cards__block--6 {
+        width: 620px;
+    }
+}
