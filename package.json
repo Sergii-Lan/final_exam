@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vm-dezertir/Gulp-Sass-Environment"
+    "url": ""
   },
-  "author": "Viacheslav Mukha",
+  "author": "Sergii",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vm-dezertir/Gulp-Sass-Environment"
+    "url": ""
   },
-  "homepage": "https://github.com/vm-dezertir/Gulp-Sass-Environment#readme",
+  "homepage": "",
   "devDependencies": {
     "browser-sync": "^2.17.5",
     "del": "^2.2.2",
